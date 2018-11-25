@@ -10,3 +10,19 @@
 | EBP | SS段的数据指针 | 5 | 0 - 0xFFFFFFFF |
 | ESI | 字符串操作的源指针;SS段的数据指针 | 6 | 0 - 0xFFFFFFFF |
 | EDI | 字符串操作的目标指针;ES段的数据指针 | 7 | 0 - 0xFFFFFFFF |
+
+# 32位寄存器 -- 16位寄存器 -- 8位寄存器
+
+| 寄存器 |
+| : --- : | : --- : | : --- : |
+|32位|16位||8位|
+|EAX|AX|AH-AL|
+|ECX|CX|CH-CL|
+|EDX|DX|DH-DL|
+|EBX|BX|BH-BL|
+|ESP|SP|
+|EBP|BP|
+|ESI|SI|
+|EDI|DI|
+
+<div align="center"> <img src="../images//32_16_8.png" width=""/> </div><br>

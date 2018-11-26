@@ -96,7 +96,7 @@
 * ***运行后***
 <div align="center"> <img src="../images//mov_r8_r8_end_4.png" width=""/> </div><br>
 
-- **MOV AH,BYTE PTR DS:[0x19FFF8]**
+- **MOV AH,BYTE PTR DS:[0x19FFE8]**
 * ***运行前***
 <div align="center"> <img src="../images//mov_r8_m8_begin_4.png" width=""/> </div><br>
 

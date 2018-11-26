@@ -102,3 +102,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//mov_r8_m8_end_4.png" width=""/> </div><br>
+
+> 5、MOV r16,r/m16
+- **MOV CX,BX**
+* ***运行前***
+<div align="center"> <img src="../images//mov_r16_r16_begin_5.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_r16_r16_end_5.png" width=""/> </div><br>
+
+- **MOV AX,WORD PTR DS:[0x19FFE8]**
+* ***运行前***
+<div align="center"> <img src="../images//mov_r16_m16_begin_5.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_r16_m16_end_5.png" width=""/> </div><br>

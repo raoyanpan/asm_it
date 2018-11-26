@@ -25,3 +25,14 @@
 | EDI | DI | - |
 
 <div align="center"> <img src="../images//32_16_8.png" width=""/> </div><br>
+
+# 指令
+
+## 释义
+    * r   通用寄存器;如:r8,指8位通用寄存器
+	* m   内存;如:m8,指8位内存
+	* imm 立即数;如:imm8,指8位立即数
+
+## MOV指令
+
+> 1、MOV r/m8,r8

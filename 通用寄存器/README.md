@@ -13,15 +13,15 @@
 
 # 32位寄存器 -- 16位寄存器 -- 8位寄存器
 
-|32位|16位||8位|
+| 32位 | 16位 | 8位 |
 | : --- : | : --- : | : --- : |
-|EAX|AX|AH-AL|
-|ECX|CX|CH-CL|
-|EDX|DX|DH-DL|
-|EBX|BX|BH-BL|
-|ESP|SP|
-|EBP|BP|
-|ESI|SI|
-|EDI|DI|
+| EAX | AX | AH-AL |
+| ECX | CX | CH-CL |
+| EDX | DX | DH-DL |
+| EBX | BX | BH-BL |
+| ESP | SP |
+| EBP | BP |
+| ESI | SI |
+| EDI | DI |
 
 <div align="center"> <img src="../images//32_16_8.png" width=""/> </div><br>

@@ -83,7 +83,7 @@
 
 - **MOV DWORD PTR DS:[0x19FFF0],EAX**
 * ***运行前***
-<div align="center"> <img src="../images//mov_m16_r16_begin.png" width=""/> </div><br>
+<div align="center"> <img src="../images//mov_m32_r32_begin.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_m16_r16_end.png" width=""/> </div><br>
+<div align="center"> <img src="../images//mov_m32_r32_end.png" width=""/> </div><br>

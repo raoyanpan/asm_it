@@ -72,3 +72,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//mov_m16_r16_end.png" width=""/> </div><br>
+
+> 3、MOV r/m32,r32
+- **MOV ECX,EBX**
+* ***运行前***
+<div align="center"> <img src="../images//mov_r32_r32_begin.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_r32_r32_end.png" width=""/> </div><br>
+
+- **MOV DWORD PTR DS:[0x19FFF0],EAX**
+* ***运行前***
+<div align="center"> <img src="../images//mov_m16_r16_begin.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_m16_r16_end.png" width=""/> </div><br>

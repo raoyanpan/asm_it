@@ -44,3 +44,8 @@
 *  4、源操作数和目标操作数不能同时为内存单元.
 
 > 1、MOV r/m8,r8
+- **MOV CX,BX**
+  ***运行前***
+<div align="center"> <img src="../images//mov_r8_r8_begin.png" width=""/> </div><br>
+  ***运行后***
+<div align="center"> <img src="../images//mov_r8_r8_end.png" width=""/> </div><br>

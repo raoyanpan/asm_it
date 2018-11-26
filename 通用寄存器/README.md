@@ -132,3 +132,27 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//mov_r32_m32_end_6.png" width=""/> </div><br>
+
+> 7、MOV r8,imm8
+- **MOV CL,0xFF**
+* ***运行前***
+<div align="center"> <img src="../images//mov_r8_imm8_begin_7.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_r8_imm8_end_7.png" width=""/> </div><br>
+
+> 8、MOV r16,imm16
+- **MOV DX,0x1234**
+* ***运行前***
+<div align="center"> <img src="../images//mov_r16_imm16_begin_8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_r16_imm16_end_8.png" width=""/> </div><br>
+
+> 9、MOV r32,imm32
+- **MOV ECX,0x12345678**
+* ***运行前***
+<div align="center"> <img src="../images//mov_r32_imm32_begin_9.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_r32_imm32_end_9.png" width=""/> </div><br>

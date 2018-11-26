@@ -87,3 +87,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//mov_m32_r32_end.png" width=""/> </div><br>
+
+> 4、MOV r8,r/m8
+- **MOV CH,AH**
+* ***运行前***
+<div align="center"> <img src="../images//mov_r8_r8_begin_4.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_r8_r8_end_4.png" width=""/> </div><br>
+
+- **MOV AH,BYTE PTR DS:[0x19FFF8]**
+* ***运行前***
+<div align="center"> <img src="../images//mov_r8_m8_begin_4.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//mov_r8_m8_end_4.png" width=""/> </div><br>

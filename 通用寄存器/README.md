@@ -156,3 +156,12 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//mov_r32_imm32_end_9.png" width=""/> </div><br>
+
+## ADD指令
+> 1、ADD r/m8,imm8
+- **ADD AL,0xFF**
+* ***运行前***
+<div align="center"> <img src="../images//add_r8_imm8_begin_1.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//add_r8_imm8_end_1.png" width=""/> </div><br>

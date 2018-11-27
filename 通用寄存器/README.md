@@ -53,10 +53,10 @@
 
 - **MOV BYTE PTR DS:[0x19FFF0],AH**
 * ***运行前***
-<div align="center"> <img src="../images/mov//_3_mov_m8_r8_begin.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_3_mov_m8_r8.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images/mov//_4_mov_m8_r8_end.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_4_mov_m8_r8.png" width=""/> </div><br>
 
 > 2、MOV r/m16,r16
 - **MOV CX,BX**
@@ -86,7 +86,7 @@
 <div align="center"> <img src="../images/mov//_11_mov_m32_r32.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//_12_mov_m32_r32.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_12_mov_m32_r32.png" width=""/> </div><br>
 
 > 4、MOV r8,r/m8
 - **MOV CH,AH**

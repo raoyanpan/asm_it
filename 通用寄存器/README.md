@@ -46,159 +46,189 @@
 > 1、MOV r/m8,r8
 - **MOV CL,BH**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r8_r8_begin.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_1_mov_r8_r8.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r8_r8_end.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_2_mov_r8_r8.png" width=""/> </div><br>
 
 - **MOV BYTE PTR DS:[0x19FFF0],AH**
 * ***运行前***
-<div align="center"> <img src="../images//mov_m8_r8_begin.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_3_mov_m8_r8_begin.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_m8_r8_end.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_4_mov_m8_r8_end.png" width=""/> </div><br>
 
 > 2、MOV r/m16,r16
 - **MOV CX,BX**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r16_r16_begin.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_5_mov_r16_r16.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r16_r16_end.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_6_mov_r16_r16.png" width=""/> </div><br>
 
 - **MOV WORD PTR DS:[0x19FFF0],BX**
 * ***运行前***
-<div align="center"> <img src="../images//mov_m16_r16_begin.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_7_mov_m16_r16.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_m16_r16_end.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_8_mov_m16_r16.png" width=""/> </div><br>
 
 > 3、MOV r/m32,r32
 - **MOV ECX,EBX**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r32_r32_begin.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_9_mov_r32_r32.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r32_r32_end.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_10_mov_r32_r32.png" width=""/> </div><br>
 
 - **MOV DWORD PTR DS:[0x19FFF0],EAX**
 * ***运行前***
-<div align="center"> <img src="../images//mov_m32_r32_begin.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_11_mov_m32_r32.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_m32_r32_end.png" width=""/> </div><br>
+<div align="center"> <img src="../images//_12_mov_m32_r32.png" width=""/> </div><br>
 
 > 4、MOV r8,r/m8
 - **MOV CH,AH**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r8_r8_begin_4.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_13_mov_r8_r8.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r8_r8_end_4.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_14_mov_r8_r8.png" width=""/> </div><br>
 
 - **MOV AH,BYTE PTR DS:[0x19FFE8]**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r8_m8_begin_4.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_15_mov_r8_m8.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r8_m8_end_4.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_16_mov_r8_m8.png" width=""/> </div><br>
 
 > 5、MOV r16,r/m16
 - **MOV CX,BX**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r16_r16_begin_5.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_17_mov_r16_r16.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r16_r16_end_5.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_18_mov_r16_r16.png" width=""/> </div><br>
 
 - **MOV AX,WORD PTR DS:[0x19FFE8]**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r16_m16_begin_5.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_19_mov_r16_m16.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r16_m16_end_5.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_20_mov_r16_m16.png" width=""/> </div><br>
 
 > 6、MOV r32,r/m32
 - **MOV ECX,EAX**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r32_r32_begin_6.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_21_mov_r32_r32.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r32_r32_end_6.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_22_mov_r32_r32.png" width=""/> </div><br>
 
 - **MOV EAX,DWORD PTR DS:[0x19FFE8]**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r32_m32_begin_6.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_23_mov_r32_m32.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r32_m32_end_6.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_24_mov_r32_m32.png" width=""/> </div><br>
 
 > 7、MOV r8,imm8
 - **MOV CL,0xFF**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r8_imm8_begin_7.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_25_mov_r8_imm8.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r8_imm8_end_7.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_26_mov_r8_imm8.png" width=""/> </div><br>
 
 > 8、MOV r16,imm16
 - **MOV DX,0x1234**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r16_imm16_begin_8.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_27_mov_r16_imm16.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r16_imm16_end_8.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_28_mov_r16_imm16.png" width=""/> </div><br>
 
 > 9、MOV r32,imm32
 - **MOV ECX,0x12345678**
 * ***运行前***
-<div align="center"> <img src="../images//mov_r32_imm32_begin_9.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_29_mov_r32_imm32.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//mov_r32_imm32_end_9.png" width=""/> </div><br>
+<div align="center"> <img src="../images/mov//_30_mov_r32_imm32.png" width=""/> </div><br>
 
 ## ADD指令
 > 1、ADD r/m8,imm8
 - **ADD AL,0xFF**
 * ***运行前***
-<div align="center"> <img src="../images//add_r8_imm8_begin_1.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_1_add_r8_imm8.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//add_r8_imm8_end_1.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_2_add_r8_imm8.png" width=""/> </div><br>
 
 - **ADD BYTE PTR DS:[0x19FFE8],0xB5**
 * ***运行前***
-<div align="center"> <img src="../images//add_m8_imm8_begin_1.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_3_add_m8_imm8.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//add_m8_imm8_end_1.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_4_add_m8_imm8.png" width=""/> </div><br>
 
 > 2、ADD r/m16,imm16
 - **ADD BX,0x5FFF**
 * ***运行前***
-<div align="center"> <img src="../images//add_r16_imm16_begin_2.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_5_add_r16_imm16.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//add_r16_imm16_end_2.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_6_add_r16_imm16.png" width=""/> </div><br>
 
 - **ADD WORD PTR DS:[0x19FFF0],0x1234**
 * ***运行前***
-<div align="center"> <img src="../images//add_m16_imm16_begin_2.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_7_add_m16_imm16.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//add_m16_imm16_end_2.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_8_add_m16_imm16.png" width=""/> </div><br>
 
 > 3、ADD r/m32,imm32
 - **ADD EAX,0xFFBFEFFF**
 * ***运行前***
-<div align="center"> <img src="../images//add_r32_imm32_begin_3.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_9_add_r32_imm32.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//add_r32_imm32_end_3.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_10_add_r32_imm32.png" width=""/> </div><br>
 
 - **ADD DWORD PTR DS:[0x19FFF4],0xFFBFEFFF**
 * ***运行前***
-<div align="center"> <img src="../images//add_m32_imm32_begin_3.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_11_add_m32_imm32.png" width=""/> </div><br>
 
 * ***运行后***
-<div align="center"> <img src="../images//add_m32_imm32_end_3.png" width=""/> </div><br>
+<div align="center"> <img src="../images/add//_12_add_m32_imm32.png" width=""/> </div><br>
+
+> 4、ADD r/m16,imm8
+- **ADD CX,1**
+* ***运行前***
+<div align="center"> <img src="../images/add//_13_add_r16_imm8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images/add//_14_add_r16_imm8.png" width=""/> </div><br>
+
+- **ADD WORD PTR DS:[0x19FFF4],0xFF**
+* ***运行前***
+<div align="center"> <img src="../images/add//_15_add_m16_imm8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images/add//_16_add_m16_imm8.png" width=""/> </div><br>
+
+> 5、ADD r/m32,imm8
+- **ADD EBX,0x12**
+* ***运行前***
+<div align="center"> <img src="../images/add//_17_add_r32_imm8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images/add//_18_add_r32_imm8.png" width=""/> </div><br>
+
+- **ADD DWORD PTR DS:[0x19FFE8],0x9D**
+* ***运行前***
+<div align="center"> <img src="../images/add//_19_add_m32_imm8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images/add//_20_add_m32_imm8.png" width=""/> </div><br>

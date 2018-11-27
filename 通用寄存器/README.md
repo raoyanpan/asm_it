@@ -187,3 +187,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//add_m16_imm16_end_2.png" width=""/> </div><br>
+
+> 3、ADD r/m32,imm32
+- **ADD EAX,0xFFBFEFFF**
+* ***运行前***
+<div align="center"> <img src="../images//add_r32_imm32_begin_3.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//add_r32_imm32_end_3.png" width=""/> </div><br>
+
+- **ADD DWORD PTR DS:[0x19FFF4],0xFFBFEFFF**
+* ***运行前***
+<div align="center"> <img src="../images//add_m32_imm32_begin_3.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//add_m32_imm32_end_3.png" width=""/> </div><br>

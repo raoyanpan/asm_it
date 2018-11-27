@@ -118,3 +118,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../../images/add//_32_add_m32_r32.png" width=""/> </div><br>
+
+> 9、ADD r8,r/m8
+- **ADD AH,CL**
+* ***运行前***
+<div align="center"> <img src="../../images/add//_33_add_r8_r8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/add//_34_add_r8_r8.png" width=""/> </div><br>
+
+- **ADD CL,BYTE PTR DS:[0x19FFE8]**
+* ***运行前***
+<div align="center"> <img src="../../images/add//_35_add_r8_m8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/add//_36_add_r8_m8.png" width=""/> </div><br>

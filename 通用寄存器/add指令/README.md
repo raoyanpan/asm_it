@@ -133,3 +133,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../../images/add//_36_add_r8_m8.png" width=""/> </div><br>
+
+> 10、ADD r16,r/m16
+- **ADD AX,CX**
+* ***运行前***
+<div align="center"> <img src="../../images/add//_37_add_r16_r16.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/add//_38_add_r16_r16.png" width=""/> </div><br>
+
+- **ADD AX,WORD PTR DS:[0x19FFE8]**
+* ***运行前***
+<div align="center"> <img src="../../images/add//_39_add_r16_m16.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/add//_40_add_r16_m16.png" width=""/> </div><br>

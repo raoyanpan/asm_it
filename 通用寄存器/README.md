@@ -165,3 +165,10 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//add_r8_imm8_end_1.png" width=""/> </div><br>
+
+- **ADD BYTE PTR DS:[0x19FFE8],0xB5**
+* ***运行前***
+<div align="center"> <img src="../images//add_m8_imm8_begin_1.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//add_m8_imm8_end_1.png" width=""/> </div><br>

@@ -232,3 +232,33 @@
 
 * ***运行后***
 <div align="center"> <img src="../images/add//_20_add_m32_imm8.png" width=""/> </div><br>
+
+> 6、ADD r/m8,r8
+- **ADD DH,CL**
+* ***运行前***
+<div align="center"> <img src="../images/add//_21_add_r8_r8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images/add//_22_add_r8_r8.png" width=""/> </div><br>
+
+- **ADD BYTE PTR DS:[19FFE8],0xAC**
+* ***运行前***
+<div align="center"> <img src="../images/add//_23_add_m8_r8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images/add//_24_add_m8_r8.png" width=""/> </div><br>
+
+> 7、ADD r/m16,r16
+- **ADD AX,CX**
+* ***运行前***
+<div align="center"> <img src="../images/add//_25_add_r16_r16.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images/add//_26_add_r16_r16.png" width=""/> </div><br>
+
+- **ADD WORD PTR DS:[0x19FFF4],CX**
+* ***运行前***
+<div align="center"> <img src="../images/add//_27_add_m16_r16.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images/add//_28_add_m16_r16.png" width=""/> </div><br>

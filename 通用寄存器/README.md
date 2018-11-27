@@ -180,3 +180,10 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//add_r16_imm16_end_2.png" width=""/> </div><br>
+
+- **ADD WORD PTR DS:[0x19FFF0],0x1234**
+* ***运行前***
+<div align="center"> <img src="../images//add_m16_imm16_begin_2.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//add_m16_imm16_end_2.png" width=""/> </div><br>

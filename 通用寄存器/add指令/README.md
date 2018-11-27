@@ -148,3 +148,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../../images/add//_40_add_r16_m16.png" width=""/> </div><br>
+
+> 11、ADD r32,r/m32
+- **ADD ECX,EBX**
+* ***运行前***
+<div align="center"> <img src="../../images/add//_41_add_r32_r32.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/add//_42_add_r32_r32.png" width=""/> </div><br>
+
+- **ADD ECX,DWORD PTR DS:[0x19FFF8]**
+* ***运行前***
+<div align="center"> <img src="../../images/add//_43_add_r32_m32.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/add//_44_add_r32_m32.png" width=""/> </div><br>

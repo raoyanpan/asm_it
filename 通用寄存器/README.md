@@ -172,3 +172,11 @@
 
 * ***运行后***
 <div align="center"> <img src="../images//add_m8_imm8_end_1.png" width=""/> </div><br>
+
+> 2、ADD r/m16,imm16
+- **ADD BX,0x5FFF**
+* ***运行前***
+<div align="center"> <img src="../images//add_r16_imm16_begin_2.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../images//add_r16_imm16_end_2.png" width=""/> </div><br>

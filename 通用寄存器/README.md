@@ -38,3 +38,13 @@
 > [MOV指令](https://github.com/raoyanpan/asm_it/tree/master/通用寄存器/mov指令/README.md)
 
 > [ADD指令](https://github.com/raoyanpan/asm_it/tree/master/通用寄存器/add指令/README.md)
+
+> [SUB指令](https://github.com/raoyanpan/asm_it/tree/master/通用寄存器/sub指令/README.md)
+
+> [AND指令](https://github.com/raoyanpan/asm_it/tree/master/通用寄存器/and指令/README.md)
+
+> [OR指令](https://github.com/raoyanpan/asm_it/tree/master/通用寄存器/or指令/README.md)
+
+> [XOR指令](https://github.com/raoyanpan/asm_it/tree/master/通用寄存器/xor指令/README.md)
+
+> [NOT指令](https://github.com/raoyanpan/asm_it/tree/master/通用寄存器/not指令/README.md)

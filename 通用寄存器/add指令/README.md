@@ -103,3 +103,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../../images/add//_28_add_m16_r16.png" width=""/> </div><br>
+
+> 8、ADD r/m32,r32
+- **ADD EAX,ECX**
+* ***运行前***
+<div align="center"> <img src="../../images/add//_29_add_r32_r32.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/add//_30_add_r32_r32.png" width=""/> </div><br>
+
+- **ADD DWORD PTR DS:[0x19FFF4],ECX**
+* ***运行前***
+<div align="center"> <img src="../../images/add//_31_add_m32_r32.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/add//_32_add_m32_r32.png" width=""/> </div><br>

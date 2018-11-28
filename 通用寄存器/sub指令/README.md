@@ -149,3 +149,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../../images/sub//_40_sub_r16_m16.png" width=""/> </div><br>
+
+> 11、SUB r32,r/m32
+- **SUB EAX,ECX**
+* ***运行前***
+<div align="center"> <img src="../../images/sub//_41_sub_r32_r32.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/sub//_42_sub_r32_r32.png" width=""/> </div><br>
+
+- **SUB EAX,DWORD PTR DS:[0x19FFE8]**
+* ***运行前***
+<div align="center"> <img src="../../images/sub//_43_sub_r32_m32.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/sub//_44_sub_r32_m32.png" width=""/> </div><br>

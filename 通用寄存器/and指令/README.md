@@ -104,3 +104,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../../images/and//_28_and_m16_r16.png" width=""/> </div><br>
+
+> 8、AND r/m32,r32
+- **AND EAX,ECX**
+* ***运行前***
+<div align="center"> <img src="../../images/and//_29_and_r32_r32.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/and//_30_and_r32_r32.png" width=""/> </div><br>
+
+- **AND DWORD PTR DS:[0x19FF8C],ECX**
+* ***运行前***
+<div align="center"> <img src="../../images/and//_31_and_m32_r32.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/and//_32_and_m32_r32.png" width=""/> </div><br>

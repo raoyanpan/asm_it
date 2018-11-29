@@ -119,3 +119,18 @@
 
 * ***运行后***
 <div align="center"> <img src="../../images/and//_32_and_m32_r32.png" width=""/> </div><br>
+
+> 9、AND r8,r/m8
+- **AND CH,CL**
+* ***运行前***
+<div align="center"> <img src="../../images/and//_33_and_r8_r8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/and//_34_and_r8_r8.png" width=""/> </div><br>
+
+- **AND CL,BYTE PTR DS:[0x19FF84]**
+* ***运行前***
+<div align="center"> <img src="../../images/and//_35_and_m8_r8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/and//_36_and_m8_r8.png" width=""/> </div><br>

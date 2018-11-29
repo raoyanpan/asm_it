@@ -44,3 +44,33 @@
 
 * ***运行后***
 <div align="center"> <img src="../../images/and//_12_and_m32_imm32.png" width=""/> </div><br>
+
+> 4、AND r/m16,imm8
+- **AND AX,0xFF**
+* ***运行前***
+<div align="center"> <img src="../../images/and//_13_and_r16_imm8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/and//_14_and_r16_imm8.png" width=""/> </div><br> 
+
+- **AND WORD PTR DS:[0x19FF84],0xFC**
+* ***运行前***
+<div align="center"> <img src="../../images/and//_15_and_m16_imm8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/and//_16_and_m16_imm8.png" width=""/> </div><br>
+
+> 5、AND r/m32,imm8
+- **AND EAX,0x99**
+* ***运行前***
+<div align="center"> <img src="../../images/and//_17_and_r32_imm8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/and//_18_and_r32_imm8.png" width=""/> </div><br> 
+
+- **AND DWORD PTR DS:[0x19FF80],0xF8**
+* ***运行前***
+<div align="center"> <img src="../../images/and//_19_and_m32_imm8.png" width=""/> </div><br>
+
+* ***运行后***
+<div align="center"> <img src="../../images/and//_20_and_m32_imm8.png" width=""/> </div><br>

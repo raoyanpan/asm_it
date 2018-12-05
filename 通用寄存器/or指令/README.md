@@ -23,7 +23,7 @@
 * ***运行后***
 <div align="center"> <img src="../../images/or//_6_or_r16_imm16.png" width=""/> </div><br> 
 
-- **OR WORD PTR DS:[19FF90],0ABCD**
+- **OR WORD PTR DS:[19FF90],0xABCD**
 * ***运行前***
 <div align="center"> <img src="../../images/or//_7_or_m16_imm16.png" width=""/> </div><br>
 
@@ -53,7 +53,7 @@
 * ***运行后***
 <div align="center"> <img src="../../images/or//_14_or_r16_imm8.png" width=""/> </div><br> 
 
-- **OR WORD PTR DS:[19FFE8],1B**
+- **OR WORD PTR DS:[0x19FFE8],0x1B**
 * ***运行前***
 <div align="center"> <img src="../../images/or//_15_or_m16_imm8.png" width=""/> </div><br>
 

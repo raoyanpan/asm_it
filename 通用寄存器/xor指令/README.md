@@ -60,105 +60,105 @@
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_16_xor_m16_imm8.png" width=""/> </div><br>
 
-> 5、OR r/m32,imm8
-- **OR EAX,0xAA**
+> 5、XOR r/m32,imm8
+- **XOR ECX,0x29**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_17_xor_r32_imm8.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_18_xor_r32_imm8.png" width=""/> </div><br> 
 
-- **OR DWORD PTR DS:[0x19FF90],0xCC**
+- **XOR DWORD PTR DS:[0x19FF90],0x35**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_19_xor_m32_imm8.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_20_xor_m32_imm8.png" width=""/> </div><br>
 
-> 6、OR r/m8,r8
-- **OR AL,CL**
+> 6、XOR r/m8,r8
+- **XOR CH,CL**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_21_xor_r8_r8.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_22_xor_r8_r8.png" width=""/> </div><br> 
 
-- **OR BYTE PTR DS:[0x19FF84],CL**
+- **XOR BYTE PTR DS:[0x19FF84],CL**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_23_xor_m8_r8.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_24_xor_m8_r8.png" width=""/> </div><br>
 
-> 7、OR r/m16,r16
-- **OR AX,CX**
+> 7、XOR r/m16,r16
+- **XOR CX,SP**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_25_xor_r16_r16.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_26_xor_r16_r16.png" width=""/> </div><br> 
 
-- **OR WORD PTR DS:[0x19FF84],AX**
+- **XOR WORD PTR DS:[0x19FF8C],CX**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_27_xor_m16_r16.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_28_xor_m16_r16.png" width=""/> </div><br>
 
-> 8、OR r/m32,r32
-- **OR EAX,ECX**
+> 8、XOR r/m32,r32
+- **XOR EAX,ECX**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_29_xor_r32_r32.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_30_xor_r32_r32.png" width=""/> </div><br> 
 
-- **OR DWORD PTR DS:[0x19FF84],EAX**
+- **XOR DWORD PTR DS:[0x19FF88],EBX**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_31_xor_m32_r32.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_32_xor_m32_r32.png" width=""/> </div><br>
 
-> 9、OR r8,r/m8
-- **OR AH,CH**
+> 9、XOR r8,r/m8
+- **XOR AH,AL**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_33_xor_r8_r8.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_34_xor_r8_r8.png" width=""/> </div><br> 
 
-- **OR AL,BYTE PTR DS:[0x19FF90]**
+- **XOR AL,BYTE PTR DS:[0x19FF90]**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_35_xor_r8_m8.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_36_xor_r8_m8.png" width=""/> </div><br>
 
-> 10、OR r16,r/m16
-- **OR CX,BX**
+> 10、XOR r16,r/m16
+- **XOR AX,SP**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_37_xor_r16_r16.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_38_xor_r16_r16.png" width=""/> </div><br> 
 
-- **OR CX,WORD PTR DS:[0x19FF90]**
+- **XOR AX,WORD PTR DS:[0x19FF8C]**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_39_xor_r16_m16.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_40_xor_r16_m16.png" width=""/> </div><br>
 
-> 11、OR r32,r/m32
-- **OR EAX,ECX**
+> 11、XOR r32,r/m32
+- **XOR EAX,EBX**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_41_xor_r32_r32.png" width=""/> </div><br>
 
 * ***运行后***
 <div align="center"> <img src="../../images/xor//_42_xor_r32_r32.png" width=""/> </div><br> 
 
-- **OR ECX,DWORD PTR DS:[0x19FF90]**
+- **XOR EAX,DWORD PTR DS:[0x19FF84]**
 * ***运行前***
 <div align="center"> <img src="../../images/xor//_43_xor_r32_m32.png" width=""/> </div><br>
 

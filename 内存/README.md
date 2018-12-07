@@ -69,3 +69,82 @@ MOV EAX,DWORD PTR DS:[ECX+4]
 <div align="center"> <img src="../images/memory//_3_1_1_memory.png" width=""/> </div><br>
 <div align="center"> <img src="../images/memory//_3_1_2_memory.png" width=""/> </div><br>
 <div align="center"> <img src="../images/memory//_3_1_3_memory.png" width=""/> </div><br>
+
+> 2、向内存中写入数据
+```asm
+MOV EAX,0x19FF7C
+
+MOV DWORD PTR DS:[EAX+4],0x12345678
+```
+<div align="center"> <img src="../images/memory//_3_2_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_3_2_2_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_3_2_3_memory.png" width=""/> </div><br>
+
+> 3、获取内存编号
+```asm
+LEA ECX,DWORD PTR DS:[EAX+8]
+```
+<div align="center"> <img src="../images/memory//_3_3_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_3_3_2_memory.png" width=""/> </div><br>
+
+### 4、寻址公式四:[reg+reg*{1,2,4,8}]
+> 1、读取内存的值
+```asm
+MOV EAX,19FF84
+
+MOV ECX,2
+
+MOV EDX,DWORD PTR DS:[EAX+ECX*4]
+```
+<div align="center"> <img src="../images/memory//_4_1_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_4_1_2_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_4_1_3_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_4_1_4_memory.png" width=""/> </div><br>
+
+> 2、向内存中写入数据
+```asm
+MOV EAX,19FF84
+
+MOV ECX,2
+
+MOV DWORD PTR DS:[EAX+ECX*4],12345678
+```
+<div align="center"> <img src="../images/memory//_4_2_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_4_2_2_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_4_2_3_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_4_2_4_memory.png" width=""/> </div><br>
+
+> 3、获取内存编号
+```asm
+LEA EDX,DWORD PTR DS:[EAX+ECX*4]
+```
+<div align="center"> <img src="../images/memory//_4_3_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_4_3_2_memory.png" width=""/> </div><br>
+
+### 5、寻址公式五:[reg+reg*{1,2,4,8}+立即数]
+> 1、读取内存的值
+```asm
+MOV EAX,19FF80v
+
+MOV ECX,2
+
+MOV EDX,DWORD PTR DS:[EAX+ECX*4+4]
+```
+<div align="center"> <img src="../images/memory//_5_1_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_5_1_2_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_5_1_3_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_5_1_4_memory.png" width=""/> </div><br>
+
+> 2、向内存中写入数据
+```asm
+MOV DWORD PTR DS:[EAX+ECX*4+4],12345678
+```
+<div align="center"> <img src="../images/memory//_5_2_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_5_2_2_memory.png" width=""/> </div><br>
+
+> 3、获取内存编号
+```asm
+LEA EBX,DWORD PTR DS:[EAX+ECX*4+2]
+```
+<div align="center"> <img src="../images/memory//_5_3_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_5_3_2_memory.png" width=""/> </div><br>

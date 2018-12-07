@@ -90,9 +90,9 @@ LEA ECX,DWORD PTR DS:[EAX+8]
 ### 4、寻址公式四:[reg+reg*{1,2,4,8}]
 > 1、读取内存的值
 ```asm
-MOV EAX,19FF84
+MOV EAX,0x19FF84
 
-MOV ECX,2
+MOV ECX,0x2
 
 MOV EDX,DWORD PTR DS:[EAX+ECX*4]
 ```
@@ -103,9 +103,9 @@ MOV EDX,DWORD PTR DS:[EAX+ECX*4]
 
 > 2、向内存中写入数据
 ```asm
-MOV EAX,19FF84
+MOV EAX,0x19FF84
 
-MOV ECX,2
+MOV ECX,0x2
 
 MOV DWORD PTR DS:[EAX+ECX*4],12345678
 ```
@@ -124,9 +124,9 @@ LEA EDX,DWORD PTR DS:[EAX+ECX*4]
 ### 5、寻址公式五:[reg+reg*{1,2,4,8}+立即数]
 > 1、读取内存的值
 ```asm
-MOV EAX,19FF80v
+MOV EAX,0x19FF80
 
-MOV ECX,2
+MOV ECX,0x2
 
 MOV EDX,DWORD PTR DS:[EAX+ECX*4+4]
 ```
@@ -137,7 +137,7 @@ MOV EDX,DWORD PTR DS:[EAX+ECX*4+4]
 
 > 2、向内存中写入数据
 ```asm
-MOV DWORD PTR DS:[EAX+ECX*4+4],12345678
+MOV DWORD PTR DS:[EAX+ECX*4+4],0x12345678
 ```
 <div align="center"> <img src="../images/memory//_5_2_1_memory.png" width=""/> </div><br>
 <div align="center"> <img src="../images/memory//_5_2_2_memory.png" width=""/> </div><br>

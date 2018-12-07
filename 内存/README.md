@@ -58,3 +58,14 @@ LEA ECX,DWORD PTR DS:[EAX]
 <div align="center"> <img src="../images/memory//_2_3_1_memory.png" width=""/> </div><br>
 <div align="center"> <img src="../images/memory//_2_3_2_memory.png" width=""/> </div><br>
 <div align="center"> <img src="../images/memory//_2_3_3_memory.png" width=""/> </div><br>
+
+### 3、寻址公式三：[reg+立即数]
+> 1、读取内存的值
+```asm
+MOV ECX,0x19FF84
+
+MOV EAX,DWORD PTR DS:[ECX+4]
+```
+<div align="center"> <img src="../images/memory//_3_1_1_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_3_1_2_memory.png" width=""/> </div><br>
+<div align="center"> <img src="../images/memory//_3_1_3_memory.png" width=""/> </div><br>

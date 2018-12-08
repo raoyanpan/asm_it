@@ -110,18 +110,18 @@ MOV EAX,DWORD PTR DS:[EDX]
 ### 练习题
 > 1、使用EBX存储栈底地址，EDX存储栈顶地址，连续存储5个不同的数.
 ```asm
-MOV EBX,19FFFC
-MOV EDX,19FFFC
-MOV DWORD PTR DS:[EDX],0xAAAAAAAA
-SUB EDX,0x4
-MOV DWORD PTR DS:[EDX],0xBBBBBBBB
-LEA EDX,DWORD PTR DS:[EDX-4]
-SUB EDX,4
-MOV DWORD PTR DS:[EDX+4],0xCCCCCCCC
-LEA EDX,DWORD PTR DS:[EDX-4]
-MOV DWORD PTR DS:[EDX+4],0xDDDDDDDD
-MOV DWORD PTR DS:[EDX],0xEEEEEEEE
-SUB EDX,4
+MOV EBX,19FFFC ;栈底
+MOV EDX,19FFFC ;栈顶
+MOV DWORD PTR DS:[EDX],0xAAAAAAAA ;压入数据(一)
+SUB EDX,0x4 ;提升栈顶
+MOV DWORD PTR DS:[EDX],0xBBBBBBBB ;压入数据(二)
+LEA EDX,DWORD PTR DS:[EDX-4] ;提升栈顶
+SUB EDX,4 ;提升栈顶(三)
+MOV DWORD PTR DS:[EDX+4],0xCCCCCCCC ;压入数据
+LEA EDX,DWORD PTR DS:[EDX-4] ;提升栈顶(四)
+MOV DWORD PTR DS:[EDX+4],0xDDDDDDDD ;压入数据
+MOV DWORD PTR DS:[EDX],0xEEEEEEEE ;压入数据(五)
+SUB EDX,4 ;提升栈顶
 ```
 <div align="center"> <img src="../images/stack//_32_stack.png" width=""/> </div><br>
 <div align="center"> <img src="../images/stack//_33_stack.png" width=""/> </div><br>
@@ -136,3 +136,18 @@ SUB EDX,4
 <div align="center"> <img src="../images/stack//_42_stack.png" width=""/> </div><br>
 <div align="center"> <img src="../images/stack//_43_stack.png" width=""/> </div><br>
 <div align="center"> <img src="../images/stack//_44_stack.png" width=""/> </div><br>
+
+> 2、分别使用栈底加偏移、栈顶加偏移的方式读取这5个数，并存储到寄存器中.
+```asm
+MOV EAX,DWORD PTR DS:[EBX] ;栈顶加偏移
+MOV ECX,DWORD PTR DS:[EBX-4] ;栈顶加偏移
+MOV EBP,DWORD PTR DS:[EBX-8] ;栈顶加偏移
+MOV ESI,DWORD PTR DS:[EDX+8] ;栈底加偏移
+MOV EDI,DWORD PTR DS:[EDX+4] ;栈底加偏移
+```
+<div align="center"> <img src="../images/stack//_45_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_46_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_47_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_48_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_49_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_50_stack.png" width=""/> </div><br>

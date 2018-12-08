@@ -151,3 +151,32 @@ MOV EDI,DWORD PTR DS:[EDX+4] ;栈底加偏移
 <div align="center"> <img src="../images/stack//_48_stack.png" width=""/> </div><br>
 <div align="center"> <img src="../images/stack//_49_stack.png" width=""/> </div><br>
 <div align="center"> <img src="../images/stack//_50_stack.png" width=""/> </div><br>
+
+> 3、弹出这5个数，恢复栈顶到原来的位置.
+```asm
+;弹出第一个数据
+MOV EAX,DWORD PTR DS:[EDX] ;弹出0xEEEEEEEE
+ADD EDX,4 ;降低堆栈
+;弹出第二个数据
+ADD EDX,4 ;降低堆栈
+MOV ECX,DWORD PTR DS:[EDX-4] ;弹出0xDDDDDDDD
+;弹出第三个数据
+MOV EBP,DWORD PTR DS:[EDX] ;弹出0xCCCCCCCC
+LEA EDX,DWORD PTR DS:[EDX+4] ;降低堆栈
+;弹出第四个数据
+MOV ESI,DWORD PTR DS:[EDX] ;弹出0xBBBBBBBB
+;弹出第五个数据
+MOV EDI,DWORD PTR DS:[EBX] ;弹出0xAAAAAAAA
+;恢复堆栈
+MOV EDX,EBX 
+```
+<div align="center"> <img src="../images/stack//_51_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_52_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_53_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_54_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_55_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_56_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_57_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_58_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_59_stack.png" width=""/> </div><br>
+<div align="center"> <img src="../images/stack//_60_stack.png" width=""/> </div><br>

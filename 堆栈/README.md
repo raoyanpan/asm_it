@@ -116,12 +116,12 @@ MOV DWORD PTR DS:[EDX],0xAAAAAAAA ;压入数据(一)
 SUB EDX,0x4 ;提升栈顶
 MOV DWORD PTR DS:[EDX],0xBBBBBBBB ;压入数据(二)
 LEA EDX,DWORD PTR DS:[EDX-4] ;提升栈顶
-SUB EDX,4 ;提升栈顶(三)
+SUB EDX,0x4 ;提升栈顶(三)
 MOV DWORD PTR DS:[EDX+4],0xCCCCCCCC ;压入数据
 LEA EDX,DWORD PTR DS:[EDX-4] ;提升栈顶(四)
 MOV DWORD PTR DS:[EDX+4],0xDDDDDDDD ;压入数据
 MOV DWORD PTR DS:[EDX],0xEEEEEEEE ;压入数据(五)
-SUB EDX,4 ;提升栈顶
+SUB EDX,0x4 ;提升栈顶
 ```
 <div align="center"> <img src="../images/stack//_32_stack.png" width=""/> </div><br>
 <div align="center"> <img src="../images/stack//_33_stack.png" width=""/> </div><br>
@@ -154,21 +154,15 @@ MOV EDI,DWORD PTR DS:[EDX+4] ;栈底加偏移
 
 > 3、弹出这5个数，恢复栈顶到原来的位置.
 ```asm
-;弹出第一个数据
-MOV EAX,DWORD PTR DS:[EDX] ;弹出0xEEEEEEEE
-ADD EDX,4 ;降低堆栈
-;弹出第二个数据
-ADD EDX,4 ;降低堆栈
+MOV EAX,DWORD PTR DS:[EDX] ;弹出0xEEEEEEEE(一)
+ADD EDX,0x4 ;降低堆栈
+ADD EDX,0x4 ;降低堆栈(二)
 MOV ECX,DWORD PTR DS:[EDX-4] ;弹出0xDDDDDDDD
-;弹出第三个数据
-MOV EBP,DWORD PTR DS:[EDX] ;弹出0xCCCCCCCC
+MOV EBP,DWORD PTR DS:[EDX] ;弹出0xCCCCCCCC(三)
 LEA EDX,DWORD PTR DS:[EDX+4] ;降低堆栈
-;弹出第四个数据
-MOV ESI,DWORD PTR DS:[EDX] ;弹出0xBBBBBBBB
-;弹出第五个数据
-MOV EDI,DWORD PTR DS:[EBX] ;弹出0xAAAAAAAA
-;恢复堆栈
-MOV EDX,EBX 
+MOV ESI,DWORD PTR DS:[EDX] ;弹出0xBBBBBBBB(四)
+MOV EDI,DWORD PTR DS:[EBX] ;弹出0xAAAAAAAA(五)
+MOV EDX,EBX ;恢复堆栈
 ```
 <div align="center"> <img src="../images/stack//_51_stack.png" width=""/> </div><br>
 <div align="center"> <img src="../images/stack//_52_stack.png" width=""/> </div><br>

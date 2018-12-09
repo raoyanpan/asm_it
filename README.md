@@ -6,3 +6,6 @@
 
 ## 三、堆栈
 >[堆栈](https://github.com/raoyanpan/asm_it/blob/master/堆栈/README.md)
+
+## 四、标志寄存器
+>[标志寄存器](https://github.com/raoyanpan/asm_it/blob/master/标志寄存器/README.md)

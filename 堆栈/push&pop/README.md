@@ -96,3 +96,90 @@ POPAD
 ```
 <div align="center"> <img src="../../images/stack/push&pop//_27_push_pop.png" width=""/> </div><br>
 <div align="center"> <img src="../../images/stack/push&pop//_28_push_pop.png" width=""/> </div><br>
+
+### 练习题
+> 1、使用4种方式实现：push ecx
+```asm
+PUSH ECX
+```
+<div align="center"> <img src="../../images/stack/push&pop//_29_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_30_push_pop.png" width=""/> </div><br>
+
+```asm
+;实现push ecx,方式一
+MOV DWORD PTR DS:[ESP-4],ECX
+SUB ESP,0x4
+```
+<div align="center"> <img src="../../images/stack/push&pop//_31_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_32_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_33_push_pop.png" width=""/> </div><br>
+
+```asm
+;实现push ecx,方式二
+SUB ESP,0x4
+MOV DWORD PTR DS:[ESP],ECX
+```
+<div align="center"> <img src="../../images/stack/push&pop//_34_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_35_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_36_push_pop.png" width=""/> </div><br>
+
+```asm
+;实现push ecx,方式三
+MOV DWORD PTR DS:[ESP-4],ECX
+LEA ESP,DWORD PTR DS:[ESP-4]
+```
+<div align="center"> <img src="../../images/stack/push&pop//_37_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_38_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_39_push_pop.png" width=""/> </div><br>
+
+```asm
+;实现push ecx,方式四
+LEA ESP,DWORD PTR DS:[ESP-4]
+MOV DWORD PTR DS:[ESP],ECX
+```
+<div align="center"> <img src="../../images/stack/push&pop//_40_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_41_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_42_push_pop.png" width=""/> </div><br>
+
+> 5、使用2种方式实现：pop ecx
+```asm
+POP ECX
+```
+<div align="center"> <img src="../../images/stack/push&pop//_43_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_44_push_pop.png" width=""/> </div><br>
+
+```asm
+;实现pop ecx,方式一
+MOV ECX,DWORD PTR DS:[ESP]
+ADD ESP,0x4
+```
+<div align="center"> <img src="../../images/stack/push&pop//_45_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_46_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_47_push_pop.png" width=""/> </div><br>
+
+```asm
+;实现pop ecx,方式二
+ADD ESP,0x4
+MOV ECX,DWORD PTR DS:[ESP-4]
+```
+<div align="center"> <img src="../../images/stack/push&pop//_48_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_49_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_50_push_pop.png" width=""/> </div><br>
+
+```asm
+;实现pop ecx,方式三
+LEA ESP,DWORD PTR DS:[ESP+4]
+MOV ECX,DWORD PTR DS:[ESP-4]
+```
+<div align="center"> <img src="../../images/stack/push&pop//_51_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_52_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_53_push_pop.png" width=""/> </div><br>
+
+```asm
+;实现pop ecx,方式四
+MOV ECX,DWORD PTR DS:[ESP]
+LEA ESP,DWORD PTR DS:[ESP+4]
+```
+<div align="center"> <img src="../../images/stack/push&pop//_54_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_55_push_pop.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/stack/push&pop//_56_push_pop.png" width=""/> </div><br>

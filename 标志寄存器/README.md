@@ -33,7 +33,7 @@ ADD EAX,0x10
 ;32位 最高位借位
 MOV EAX,0x40000001
 
-SUB EAX,E0000000
+SUB EAX,0xE0000000
 ```
 
 ### 2、奇偶标志PF(Parity Flag)

@@ -7,26 +7,32 @@
 ```asm
 ;8位 最高位进位
 MOV AL,0xFD
+
 ADD AL,0x10
 
 ;8位 最高位借位
 MOV AL,0x10
+
 SUB AL,0xF0
 
 ;16位 最高位进位
 MOV AX,0xFFF1
+
 ADD AL,0x10
 
 ;16位 最高位借位
 MOV AX,0x2001
-SUB AX,oxF000
+
+SUB AX,0xF000
 
 ;32位 最高位进位
 MOV EAX,0xFFFFFFF1  ;-F0
+
 ADD EAX,0x10
 
 ;32位 最高位借位
 MOV EAX,0x40000001
+
 SUB EAX,E0000000
 ```
 
@@ -35,14 +41,17 @@ SUB EAX,E0000000
 ```asm
 ;8位 结果中"1"的个数为偶数 PF值为1
 MOV AL,0x1
+
 ADD AL,0x2
 
 ;16位 结果中"1"的个数为偶数 PF值为1
 MOV AX,0x1000
+
 ADD AX,0x2000
 
 ;32位 结果中"1"的个数为偶数 PF值为1
 MOV EAX,0x10000000
+
 ADD EAX,0x20000000
 ```
 
@@ -51,34 +60,35 @@ ADD EAX,0x20000000
 **(1)、在字(WORD:16位;DWORD:32位)操作时，发生低字节向高字节进位或借位时。** <br/>
 **(2)、在字节(BYTE:8位)操作时，发生低4位向高4位进位或借位时。** <br/>
 
-> 以下位置:
-8位  F`F`<br/>
-16位 FF`F`F<br/>
-32位 FFFF`F`FFF<br/>
-
 ```asm
 ;8位 向高字节进位
 MOV AL,0xF
+
 ADD AL,0x1
 
 ;8位 向高字节借位
 MOV AL,0x10
+
 SUB AL,0x2
 
 ;16位 向高字节进位
 MOV AX,0x4EDE
+
 ADD AX,0x2
 
 ;16位 向高字节借位
 MOV AX,0x1C
+
 SUB AX,0xF
 
 ;32位 向高字节进位
 MOV EAX,0x1000000F
+
 ADD EAX,0x1
 
 ;32位 向高字节借位
 MOV EAX,0x10000021
+
 SUB EAX,0x2
 ```
 
@@ -100,14 +110,17 @@ XOR EAX,EAX ;清零
 ```asm
 ;8位 高位为"1",那么其大于"7F",所以,OF溢出,会受影响。
 MOV AL,0x70
+
 ADD AL,0x10
 
 ;16位 高位为"1",那么其大于"7FFF",所以,OF溢出,会受影响。
 MOV AX,0x7001
+
 ADD AX,0x1000
 
 ;32位 高位为"1",那么其大于" 7FFFFFFF",所以,OF溢出,会受影响。
 MOV EAX,0x70000001
+
 ADD EAX,0x10000000
 ```
 
@@ -129,18 +142,22 @@ ADD EAX,0x10000000
 ```asm
 1、无符号、有符号都不溢出
 MOV AL,8
+
 ADD AL,8
 
 ;2、无符号溢出、有符号不溢出
 MOV AL,0xFF
+
 ADD AL,2
 
 ;3、无符号不溢出、有符号溢出
 MOV AL,7F
+
 ADD AL,2
 
 ;4、无符号、有符号都溢出	
 MOV AL,0xFE
+
 ADD AL,80	
 ```
 

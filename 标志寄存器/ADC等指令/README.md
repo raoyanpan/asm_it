@@ -219,3 +219,37 @@ REP MOVSW
 <div align="center"> <img src="../../images/eflags/adc//_58_rep_movsd.png" width=""/> </div><br>
 <div align="center"> <img src="../../images/eflags/adc//_59_rep_movsd.png" width=""/> </div><br>
 <div align="center"> <img src="../../images/eflags/adc//_60_rep_movsd.png" width=""/> </div><br>
+
+> REP指令重复STOS
+```asm
+;REP STOSB
+MOV EDI,0x19FFF0
+MOV ECX,0x5
+REP STOSB
+```
+<div align="center"> <img src="../../images/eflags/adc//_61_rep_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_62_rep_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_63_rep_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_64_rep_stosb.png" width=""/> </div><br>
+
+```asm
+;REP STOSW
+MOV EDI,0x19FFE0
+MOV ECX,0x5
+REP STOSW
+```
+<div align="center"> <img src="../../images/eflags/adc//_65_rep_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_66_rep_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_67_rep_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_68_rep_stosw.png" width=""/> </div><br>
+
+```asm
+;REP STOSD
+MOV EDI,0x19FFE0
+MOV ECX,0x5
+REP STOSD
+```
+<div align="center"> <img src="../../images/eflags/adc//_69_rep_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_70_rep_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_71_rep_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_72_rep_stosd.png" width=""/> </div><br>

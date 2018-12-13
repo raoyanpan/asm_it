@@ -93,3 +93,129 @@ MOVSB
 <div align="center"> <img src="../../images/eflags/adc//_6_movsb.png" width=""/> </div><br>
 <div align="center"> <img src="../../images/eflags/adc//_7_movsb.png" width=""/> </div><br>
 <div align="center"> <img src="../../images/eflags/adc//_8_movsb.png" width=""/> </div><br>
+
+```asm
+;移动五个字
+MOV ESI,0x19FFB0
+MOV EDI,0x19FFE0
+MOVSW
+MOVSW
+MOVSW
+MOVSW
+MOVSW
+```
+<div align="center"> <img src="../../images/eflags/adc//_9_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_10_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_11_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_12_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_13_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_14_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_15_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_16_movsw.png" width=""/> </div><br>
+
+```asm
+;移动五个双字
+MOV ESI,0x19FFC0
+MOV EDI,0x19FFE0
+MOVSD
+MOVSD
+MOVSD
+MOVSD
+MOVSD
+```
+<div align="center"> <img src="../../images/eflags/adc//_17_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_18_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_19_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_20_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_21_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_22_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_23_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_24_movsd.png" width=""/> </div><br>
+
+> 用STOS指令分别存储5个字节、5个字、5个双字
+```asm
+;存储五个字节
+MOV EDI,0x19FFD0
+STOSB
+STOSB
+STOSB
+STOSB
+STOSB
+```
+<div align="center"> <img src="../../images/eflags/adc//_25_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_26_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_27_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_28_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_29_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_30_stosb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_31_stosb.png" width=""/> </div><br>
+
+```asm
+;储存五个字
+MOV EDI,0x19FFE0
+STOSW
+STOSW
+STOSW
+STOSW
+STOSW
+```
+<div align="center"> <img src="../../images/eflags/adc//_32_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_33_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_34_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_35_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_36_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_37_stosw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_38_stosw.png" width=""/> </div><br>
+
+```asm
+;储存五个双字
+MOV EDI,0x19FFE0
+STOSD
+STOSD
+STOSD
+STOSD
+STOSD
+```
+<div align="center"> <img src="../../images/eflags/adc//_39_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_40_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_41_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_42_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_43_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_44_stosd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_45_stosd.png" width=""/> </div><br>
+
+> REP指令重复MOVS
+```asm
+;REP MOVSB
+MOV ESI,0x19FFE0
+MOV EDI,0x19FFF0
+MOV ECX,0x5
+REP MOVSB
+```
+<div align="center"> <img src="../../images/eflags/adc//_46_rep_movsb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_47_rep_movsb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_48_rep_movsb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_49_rep_movsb.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_50_rep_movsb.png" width=""/> </div><br>
+
+```asm
+;REP MOVSW
+MOV ESI,0x19FFC0
+MOV ESI,0x19FFC0
+MOV ECX,0x5
+REP MOVSW
+```
+<div align="center"> <img src="../../images/eflags/adc//_51_rep_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_52_rep_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_53_rep_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_54_rep_movsw.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_55_rep_movsw.png" width=""/> </div><br>
+
+```asm
+;REP MOVSD
+```
+<div align="center"> <img src="../../images/eflags/adc//_56_rep_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_57_rep_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_58_rep_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_59_rep_movsd.png" width=""/> </div><br>
+<div align="center"> <img src="../../images/eflags/adc//_60_rep_movsd.png" width=""/> </div><br>

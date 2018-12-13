@@ -161,8 +161,4 @@ MOV AL,0xFE
 ADD AL,80	
 ```
 
-
-
-
-
-
+# [ADC等指令](https://github.com/raoyanpan/asm_it/blob/master/标志寄存器/ADC等指令/README.md)

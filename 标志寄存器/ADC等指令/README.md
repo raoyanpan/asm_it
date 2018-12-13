@@ -213,6 +213,10 @@ REP MOVSW
 
 ```asm
 ;REP MOVSD
+MOV ESI,0x19FFD0
+MOV EDI,0x19FFE0
+MOV ECX,0x5
+REP MOVSD
 ```
 <div align="center"> <img src="../../images/eflags/adc//_56_rep_movsd.png" width=""/> </div><br>
 <div align="center"> <img src="../../images/eflags/adc//_57_rep_movsd.png" width=""/> </div><br>

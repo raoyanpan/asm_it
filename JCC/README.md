@@ -24,15 +24,15 @@
 `该指令是比较两个操作数,实际上,它相当于SUB指令,但是相减的结构并不保存到第一个操作数中`
 `比较两个操作数,不影响结果,只影响标志寄存器`
 ```asm
-MOV EAX,100	
-MOV ECX,100	
-CMP EAX,ECX
+MOV EAX,100\r	
+MOV ECX,100\r	
+CMP EAX,ECX\r
 ;EAX=ECX,ZF = 1,PF=1,最低有效字节值为0	
 ```
 ```asm
-MOV EAX,100	
-MOV ECX,200	
-CMP EAX,ECX	
+MOV EAX,100\r	
+MOV ECX,200\r	
+CMP EAX,ECX\r
 ;EAX<ECX,CF=1,PF=1,最低有效字节值为0,SF=1,
 ```
 

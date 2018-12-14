@@ -67,3 +67,18 @@ CMP EAX,ECX
 | 14 | JNL,JGE | 大于等于则跳转(有符号数) | SF=OF |
 | 15 | JLE,JNG | 小于等于则跳转(有符号数) | ZF=1 or SF≠ OF |
 | 16 | JNLE,JG | 大于则跳转(有符号数) | ZF=0 and SF=OF |
+
+- **1、JE,JZ**
+```asm
+MOV AL,1
+MOV CL,1
+CMP AL,CL
+JE  0x778DCE5D
+```
+- **2、JNE,JNZ**
+```asm
+MOV AL,1
+MOV CL,2
+CMP AL,CL
+JNE 0x778DCE5D
+```

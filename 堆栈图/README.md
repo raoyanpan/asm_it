@@ -8,3 +8,6 @@
 
 - **堆栈图练习二**
 <div align="center"> <img src="../images//_3_stack_img.png" width=""/> </div><br>
+
+- **堆栈图练习三**
+<div align="center"> <img src="../images//_4_stack_img.png" width=""/> </div><br>

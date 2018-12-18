@@ -194,7 +194,8 @@ int main(int argc, char* argv[])
 ```
 
 ## 练习
-> **Demo4.exe**
+> **见Demo4.exe**
+
 > **见Excel**
 ```C
 #include "stdafx.h"

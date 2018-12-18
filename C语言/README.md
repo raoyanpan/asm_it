@@ -108,7 +108,7 @@ int plus()
 	return x+ y;
 }
 
-//函数入口
+//程序入口
 int main(int argc, char* argv[])
 {
 	plus();
@@ -156,7 +156,7 @@ int plus(int x,int y)
     return x+y;
 }
 
-//函数入口
+//程序入口
 int main(int argc, char* argv[])
 {
 	plus(5, 6);
@@ -191,4 +191,49 @@ int main(int argc, char* argv[])
 00401041   mov         esp,ebp
 00401043   pop         ebp ;降低堆栈
 00401044   ret ;函数返回
+```
+
+## 练习
+> **Demo4.exe**
+> **见Excel**
+```C
+#include "stdafx.h"
+
+//两个任意整数加法
+int plus1(int x, int y)
+{
+	return x + y;
+}
+
+//三个任意整数的加法
+int plus2(int x,int y, int z)
+{
+	return x + y + z;
+}
+
+//五个任意整数的加法
+
+int plus3(int x,int y,int z,int v, int k)
+{
+	int a,b;
+	a = plus1(x,y);
+	b = plus2(z,v,k);
+	
+	return a + b;
+}
+
+//程序入口
+int main(int argc, char* argv[])
+{
+	//两个任意整数的加法
+	plus1(1,2);
+
+	//三个任意整数的加法
+	plus2(3,4,5);
+
+	//五个任意整数的加法
+	plus3(6,7,8,9,10);
+
+	return 0;
+}
 ```

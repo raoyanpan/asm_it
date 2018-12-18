@@ -1,7 +1,7 @@
 ## C语言
 
 ### 无参,无返回值的函数调用
-> ** 见Test.exe**
+> **见Test.exe**
 
 ```C
 #include "stdafx.h"
@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
 0040103E   ret  ;函数返回
 ```
 
-### 有参数，无返回值的函数格式
+### 有参数，无返回值的函数
 > **见Demo.exe**
 
 ```C
@@ -92,4 +92,55 @@ int main(int argc, char* argv[])
 00401044   mov         esp,ebp
 00401046   pop         ebp ;降低堆栈
 00401047   ret ;函数返回
+```
+
+### 无参数,有返回值
+> **见Demo2.exe**
+
+```C
+#include "stdafx.h"
+
+//无参,有返回值函数
+int plus()
+{
+	int x = 3;
+	int y = 4;
+
+	return x+ y;
+}
+
+//函数入口
+int main(int argc, char* argv[])
+{
+	plus();
+
+	return 0;
+}
+```
+
+```asm
+00401078   call        @ILT+5(plus) (0040100a)
+
+0040100A   jmp         plus (00401020)
+
+00401020   push        ebp
+00401021   mov         ebp,esp
+00401023   sub         esp,48h ;提升堆栈
+00401026   push        ebx
+00401027   push        esi
+00401028   push        edi ;保护现场
+00401029   lea         edi,[ebp-48h]
+0040102C   mov         ecx,12h
+00401031   mov         eax,0CCCCCCCCh
+00401036   rep stos    dword ptr [edi] ;填充缓冲区
+00401038   mov         dword ptr [ebp-4],3
+0040103F   mov         dword ptr [ebp-8],4
+00401046   mov         eax,dword ptr [ebp-4]
+00401049   add         eax,dword ptr [ebp-8] ;函数具体功能,eax为返回值
+0040104C   pop         edi
+0040104D   pop         esi
+0040104E   pop         ebx ;恢复现场
+0040104F   mov         esp,ebp
+00401051   pop         ebp ;降低堆栈
+00401052   ret ;函数返回
 ```

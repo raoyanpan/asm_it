@@ -213,7 +213,6 @@ int plus2(int x,int y, int z)
 }
 
 //五个任意整数的加法
-
 int plus3(int x,int y,int z,int v, int k)
 {
 	int a,b;
@@ -238,3 +237,76 @@ int main(int argc, char* argv[])
 	return 0;
 }
 ```
+
+> 用__declspec(naked)裸函数实现下面的功能						
+
+```C
+#include "stdafx.h"
+
+/*
+ * 用__declspec(naked)裸函数实现下面的功能						
+ * 练习目的:
+ * 熟悉堆栈结构						 
+ * 参数、局部变量的位置
+ * 返回值存储的位置					
+ *	int plus(int x,int y,int z)	
+ *	{						
+ *		int a = 2;					
+ *		int b = 3;					
+ *		int c = 4;					
+ *		return x+y+z+a+b+c;					
+ *	}
+ */
+int __declspec(naked) plus(int x,int y,int z)
+{
+    __asm
+    {
+        //保存原来栈底
+        push ebp
+        //提升堆栈
+        mov ebp,esp
+        sub esp,0x40
+        //保护现场
+        push edi
+        push esi
+        push ebx
+        //填充缓冲区
+        mov eax,0xcccccccc
+        mov ecx,0x10
+        lea edi,dword ptr ds:[ebp-0x40]
+        rep stosd
+        //函数核心功能
+        //存储局部变量
+        mov dword ptr ds:[ebp-0x4],2
+        mov dword ptr ds:[ebp-0x8],3
+        mov dword ptr ds:[ebp-0xc],4
+        
+        //参数计算
+        mov eax,dword ptr ds:[ebp+0x8]
+        add eax,dword ptr ds:[ebp+0xc]
+        add eax,dword ptr ds:[ebp+0x10]
+        
+        add eax,dword ptr ds:[ebp-0x4]
+        add eax,dword ptr ds:[ebp-0x8]
+        add ebp,dword ptr ds:[ebp-0xc]
+        
+        //恢复现场
+        pop ebx
+        pop esi
+        pop edi
+        //降低堆栈
+        mov ebp,esp
+        pop ebp
+        
+        ret
+    }
+}
+
+//程序入口
+int main(int argc, char* argv[])
+{
+    plus(1,2,3);
+    
+    return 0;
+}
+```					

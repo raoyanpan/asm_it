@@ -335,5 +335,36 @@ int main(int argc, char* argv[])
 > **见CallingConvention.exe**
 
 ```C
+#include "stdafx.h"
 
+int __cdecl plus2(int a,int b)
+{
+    return a + b;
+}
+
+int __stdcall plus1(int a,int b,int c)
+{
+    return a + b + c;
+}
+
+int __fastcall plus(int a,int b,int c,int d,int e)
+{
+	int x,y;
+
+	x = plus1(a,b,c);
+    
+    y = plus2(a,b);
+    
+    return plus2(x,y);
+}
+
+
+//程序入口
+void main(int argc, char* argv[])
+{
+    int a;
+    a = plus(1,3,4,6,7);
+    
+    printf("%d\n", a);
+}
 ```

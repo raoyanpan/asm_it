@@ -368,3 +368,160 @@ void main(int argc, char* argv[])
     printf("%d\n", a);
 }
 ```
+
+> 定义4个int类型的全局变量，分别是g_x,g_y,g_z,g_r,使用if..else..分支语句，将最大的值存储到g_r中
+> int g_x = 5;	
+> int g_y = 4;	
+> int g_z = 7;	
+> int g_r = 0;	
+```C
+#include "stdafx.h"
+
+void Max()
+{
+	int g_x = 5;	
+	int g_y = 4;	
+	int g_z = 7;	
+	int g_r = 0;	
+
+	if(g_x > g_r) {
+		g_r = g_x;
+	}
+
+	if(g_y > g_x) {
+		g_r = g_y;
+	}
+
+	if(g_z > g_x) {
+		g_r = g_z;
+	}
+}
+
+//程序入口
+int main(int argc, char* argv[])
+{
+	Max();
+	return 0;
+}
+```
+
+> 找出数组里面最大的值,并存储到全局变量中(if..esle)					
+> int arr[4] = {2,5,7,9};					
+> int g_r;					
+```C
+int arr[4] = {2,5,7,9};
+int g_r;
+
+void ArrMax()
+{
+	if(arr[0] < arr[1]) {
+		g_r = arr[1];
+	}else {
+		g_r = arr[0];
+	}
+
+	if(g_r < arr[2]) {
+		g_r = arr[2];
+	} 
+
+	if(g_r < arr[3]) {
+		g_r = arr[3];
+	}
+}
+```
+
+> 将数组所有的元素相加，将结果存储到g_r中
+> int arr[10] = {2,5,7,9,22,4,8,22,3,18};
+> int g_r;
+```C
+int arr[10] = {2,5,7,9,22,4,8,22,3,18};
+int g_r;
+
+int ArrMax()
+{
+	
+	for(int i=0;i<10;i++) {
+		g_r += arr[i];
+	}
+	printf("%d\n",g_r);
+	return 0;
+}
+```
+
+> 俩俩比较数组的值，将最大的一个存储到数组的最后一个位置(要求使用for循环实现)
+> int arr[10] = {2,7,5,9,22,4,8,22,3,18};
+> int g_r;
+```
+实现过程：
+1、先比较2 7 因为2比7小 所有不交换位置
+2、再比较7 5 7比5大 所以讲7的位置和5的位置互换，也就是将5存储到7的位置，将7存储到5的位置
+3、再比较7 9 7比9小 不交换位置
+4、再比较9 22 9比22小 交换位置
+5、一直重复上面的过程，最后22存储在数组的最后一个位置，程序结束
+```
+
+```C
+int ArrMax()
+{
+	int length = 10;
+
+	for(int j=0;j<length-1;j++){
+		for(int i=0;i<length-1-j;i++) {
+			if(arr[i] >= arr[i+1]){
+				int t = arr[i];
+				arr[i] = arr[i+1];
+				arr[i+1] = t;
+			}
+		}
+	}
+	return 0;
+}
+```
+
+> 全局变量 局部变量 参数
+
+> **全局变量: 基址**
+- 程序编译完成后地址就已经确认
+
+- 全局变量的值可以被所有函数修改,里面存储的是最后一次修改的值
+
+- 全局变量所占内存会一直存在,直到整个进程结束
+
+- 全局变量的识别
+- MOV 寄存器,BYTE/WORD/DWORD PTR DS:[0x12345678]
+- 通过寄存器的宽度,或者BYTE/WORD/DWORD 来判断全局变量的宽度
+```asm
+;调用处代码
+push        5								
+push        4								
+call        0040100f								
+add         esp,8
+	
+;函数内部
+                                                ;函数内部功能分析：		
+00401030   push        ebp								
+00401031   mov         ebp,esp                  ;1、分析参数：		
+00401033   sub         esp,44h								
+00401036   push        ebx								
+00401037   push        esi								
+00401038   push        edi                      ;2、分析局部变量		
+00401039   lea         edi,[ebp-44h]								
+0040103C   mov         ecx,11h								
+00401041   mov         eax,0CCCCCCCCh								
+00401046   rep stos    dword ptr [edi]								
+00401048   mov         eax,[004225c4]           ;3、分析全局变量		
+0040104D   mov         dword ptr [ebp-4],eax	mov         eax,[004225c4]						
+00401050   mov         ecx,dword ptr [ebp+8]								
+00401053   cmp         ecx,dword ptr [ebp+0Ch]								
+00401056   jg          00401064								
+00401058   mov         edx,dword ptr [ebp+0Ch]  ;4、功能分析		
+0040105B   add         edx,dword ptr [ebp-4]								
+0040105E   mov         dword ptr [004225c4],edx								
+00401064   pop         edi								
+00401065   pop         esi                      ;5、返回值分析		
+00401066   pop         ebx								
+00401067   mov         esp,ebp								
+00401069   pop         ebp								
+0040106A   ret                                  ;6、还原成C函数		
+
+```

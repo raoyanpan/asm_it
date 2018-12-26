@@ -488,8 +488,19 @@ int ArrMax()
 - 全局变量所占内存会一直存在,直到整个进程结束
 
 - 全局变量的识别
-- MOV 寄存器,BYTE/WORD/DWORD PTR DS:[0x12345678]
-- 通过寄存器的宽度,或者BYTE/WORD/DWORD 来判断全局变量的宽度
+ - MOV 寄存器,BYTE/WORD/DWORD PTR DS:[0x12345678]
+ - 通过寄存器的宽度,或者BYTE/WORD/DWORD 来判断全局变量的宽度
+
+> **局部变量**
+- 局部变量在程序编译完成后并没有分配固定的地址
+
+- 只有所属的程序被调用了才会分配内存地址
+
+- 局部变量只能在函数内部使用,函数A不能使用函数B的局部变量
+
+- 局部变量的识别
+ - ebp-0x4 或 esp+0x44
+ 
 ```asm
 ;调用处代码
 push        5								
@@ -501,27 +512,50 @@ add         esp,8
                                                 ;函数内部功能分析：		
 00401030   push        ebp								
 00401031   mov         ebp,esp                  ;1、分析参数：		
-00401033   sub         esp,44h								
+00401033   sub         esp,44h					[ebp+8]:X [ebp+0Ch]:Y		
 00401036   push        ebx								
 00401037   push        esi								
 00401038   push        edi                      ;2、分析局部变量		
-00401039   lea         edi,[ebp-44h]								
+00401039   lea         edi,[ebp-44h]			[ebp-4]	= eax = [004225c4]			
 0040103C   mov         ecx,11h								
 00401041   mov         eax,0CCCCCCCCh								
 00401046   rep stos    dword ptr [edi]								
 00401048   mov         eax,[004225c4]           ;3、分析全局变量		
-0040104D   mov         dword ptr [ebp-4],eax	mov         eax,[004225c4]						
+0040104D   mov         dword ptr [ebp-4],eax	[004225c4] G						
 00401050   mov         ecx,dword ptr [ebp+8]								
 00401053   cmp         ecx,dword ptr [ebp+0Ch]								
 00401056   jg          00401064								
 00401058   mov         edx,dword ptr [ebp+0Ch]  ;4、功能分析		
-0040105B   add         edx,dword ptr [ebp-4]								
-0040105E   mov         dword ptr [004225c4],edx								
-00401064   pop         edi								
-00401065   pop         esi                      ;5、返回值分析		
-00401066   pop         ebx								
-00401067   mov         esp,ebp								
+0040105B   add         edx,dword ptr [ebp-4]	如果X<=Y,那么执行:						
+0040105E   mov         dword ptr [004225c4],edx	    mov         edx,dword ptr [ebp+0Ch] 			
+00401064   pop         edi					        add         edx,dword ptr [ebp-4]	
+00401065   pop         esi                          mov         dword ptr [004225c4],edx		
+00401066   pop         ebx                      ;5、返回值分析								
+00401067   mov         esp,ebp                      无								
 00401069   pop         ebp								
 0040106A   ret                                  ;6、还原成C函数		
+```
 
+```C
+//还原成C函数
+#include "stdafx.h"
+
+int G;
+
+void Test(int x,int y)
+{
+	int z = G;
+
+	if(x <= y){
+		G = y + z;
+	}
+}
+
+//程序入口
+int main(int argc, char* argv[])
+{
+	Test(4,5);
+
+	return 0;
+}
 ```

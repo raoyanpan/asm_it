@@ -527,9 +527,9 @@ add         esp,8
 00401056   jg          00401064								
 00401058   mov         edx,dword ptr [ebp+0Ch]  ;4、功能分析		
 0040105B   add         edx,dword ptr [ebp-4]	如果X<=Y,那么执行:						
-0040105E   mov         dword ptr [004225c4],edx	    mov         edx,dword ptr [ebp+0Ch] 			
-00401064   pop         edi					        add         edx,dword ptr [ebp-4]	
-00401065   pop         esi                          mov         dword ptr [004225c4],edx		
+0040105E   mov         dword ptr [004225c4],edx	00401058   mov         edx,dword ptr [ebp+0Ch] 			
+00401064   pop         edi					    0040105B   add         edx,dword ptr [ebp-4]	
+00401065   pop         esi                      0040105E   mov         dword ptr [004225c4],edx		
 00401066   pop         ebx                      ;5、返回值分析								
 00401067   mov         esp,ebp                      无								
 00401069   pop         ebp								

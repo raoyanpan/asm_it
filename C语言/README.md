@@ -559,3 +559,68 @@ int main(int argc, char* argv[])
 	return 0;
 }
 ```
+
+```asm
+004010B0   push        ebp							    函数内部功能分析：	
+004010B1   mov         ebp,esp								
+004010B3   sub         esp,48h							1、分析参数：	
+004010B6   push        ebx								[ebp+8]:X [ebp+0Ch]:Y
+004010B7   push        esi								
+004010B8   push        edi								
+004010B9   lea         edi,[ebp-48h]                    2、分析局部变量	
+004010BC   mov         ecx,12h							[ebp-4] = eax = G
+004010C1   mov         eax,0CCCCCCCCh					[ebp-8] = 2			
+004010C6   rep stos    dword ptr [edi]								
+004010C8   mov         eax,[004225c4]								
+004010CD   mov         dword ptr [ebp-4],eax            3、分析全局变量	
+004010D0   mov         dword ptr [ebp-8],2				[004225c4]				
+004010D7   mov         ecx,dword ptr [ebp+8]			4、功能分析						
+004010DA   cmp         ecx,dword ptr [ebp+0Ch]			比较X,Y的大小					
+004010DD   jl          004010e8							如果X>=Y	
+004010DF   mov         edx,dword ptr [ebp-8]            004010DF   mov         edx,dword ptr [ebp-8] 
+004010E2   add         edx,1							004010E2   add         edx,1	
+004010E5   mov         dword ptr [ebp-8],edx			004010E5   mov         dword ptr [ebp-8],edx					
+004010E8   mov         eax,dword ptr [ebp+8]			如果X<Y					
+004010EB   cmp         eax,dword ptr [ebp+0Ch]          004010F0   mov         ecx,dword ptr [ebp-8]	
+004010EE   jge         004010fb							004010F3   mov         dword ptr [004225c4],ecx	
+004010F0   mov         ecx,dword ptr [ebp-8]			否则					
+004010F3   mov         dword ptr [004225c4],ecx			004010FB   mov         edx,dword ptr [ebp-4]					
+004010F9   jmp         00401107							004010FE   add         edx,dword ptr [ebp-8]
+004010FB   mov         edx,dword ptr [ebp-4]			00401101   mov         dword ptr [004225c4],edx
+004010FE   add         edx,dword ptr [ebp-8]			5、返回值分析					
+00401101   mov         dword ptr [004225c4],edx			无			
+00401107   pop         edi								6、还原成C函数
+00401108   pop         esi								
+00401109   pop         ebx								
+0040110A   mov         esp,ebp								
+0040110C   pop         ebp								
+0040110D   ret								            
+```
+```C
+#include "stdafx.h"
+
+int g;
+
+void Test(int x,int y)
+{
+	int a = g;
+	int b = 2;
+
+	if(x>=y){
+		b = b + 1;
+	}
+	if(x<y){
+		g = b;
+	}else {
+		g = a +b;
+	}
+}
+
+//程序入口
+int main(int argc, char* argv[])
+{
+	Test(4,5);
+
+	return 0;
+}
+```

@@ -516,7 +516,7 @@ add         esp,8
 00401036   push        ebx								
 00401037   push        esi								
 00401038   push        edi                      ;2、分析局部变量		
-00401039   lea         edi,[ebp-44h]            ;[ebp-4]	= eax = [004225c4]			
+00401039   lea         edi,[ebp-44h]            ;[ebp-4] = eax = [004225c4]			
 0040103C   mov         ecx,11h								
 00401041   mov         eax,0CCCCCCCCh								
 00401046   rep stos    dword ptr [edi]								
@@ -528,7 +528,7 @@ add         esp,8
 00401058   mov         edx,dword ptr [ebp+0Ch]  ;4、功能分析		
 0040105B   add         edx,dword ptr [ebp-4]	;如果X<=Y,那么执行:						
 0040105E   mov         dword ptr [004225c4],edx	;00401058   mov         edx,dword ptr [ebp+0Ch] 			
-00401064   pop         edi					    ;0040105B   add         edx,dword ptr [ebp-4]	
+00401064   pop         edi                      ;0040105B   add         edx,dword ptr [ebp-4]	
 00401065   pop         esi                      ;0040105E   mov         dword ptr [004225c4],edx		
 00401066   pop         ebx                      ;5、返回值分析								
 00401067   mov         esp,ebp                  ;    无								
@@ -576,20 +576,20 @@ int main(int argc, char* argv[])
 004010D0   mov         dword ptr [ebp-8],2              ;[004225c4]				
 004010D7   mov         ecx,dword ptr [ebp+8]            ;4、功能分析						
 004010DA   cmp         ecx,dword ptr [ebp+0Ch]          ;比较X,Y的大小					
-004010DD   jl          004010e8							;如果X>=Y	
+004010DD   jl          004010e8                         ;如果X>=Y	
 004010DF   mov         edx,dword ptr [ebp-8]            ;004010DF   mov         edx,dword ptr [ebp-8] 
-004010E2   add         edx,1							;004010E2   add         edx,1	
-004010E5   mov         dword ptr [ebp-8],edx			;004010E5   mov         dword ptr [ebp-8],edx					
-004010E8   mov         eax,dword ptr [ebp+8]			;如果X<Y					
+004010E2   add         edx,1                            ;004010E2   add         edx,1	
+004010E5   mov         dword ptr [ebp-8],edx            ;004010E5   mov         dword ptr [ebp-8],edx					
+004010E8   mov         eax,dword ptr [ebp+8]            ;如果X<Y					
 004010EB   cmp         eax,dword ptr [ebp+0Ch]          ;004010F0   mov         ecx,dword ptr [ebp-8]	
-004010EE   jge         004010fb							;004010F3   mov         dword ptr [004225c4],ecx	
-004010F0   mov         ecx,dword ptr [ebp-8]			;否则					
-004010F3   mov         dword ptr [004225c4],ecx			;004010FB   mov         edx,dword ptr [ebp-4]					
-004010F9   jmp         00401107							;004010FE   add         edx,dword ptr [ebp-8]
-004010FB   mov         edx,dword ptr [ebp-4]			;00401101   mov         dword ptr [004225c4],edx
-004010FE   add         edx,dword ptr [ebp-8]			;5、返回值分析					
-00401101   mov         dword ptr [004225c4],edx			;   无			
-00401107   pop         edi								;6、还原成C函数
+004010EE   jge         004010fb                         ;004010F3   mov         dword ptr [004225c4],ecx	
+004010F0   mov         ecx,dword ptr [ebp-8]            ;否则					
+004010F3   mov         dword ptr [004225c4],ecx         ;004010FB   mov         edx,dword ptr [ebp-4]					
+004010F9   jmp         00401107                         ;004010FE   add         edx,dword ptr [ebp-8]
+004010FB   mov         edx,dword ptr [ebp-4]            ;00401101   mov         dword ptr [004225c4],edx
+004010FE   add         edx,dword ptr [ebp-8]            ;5、返回值分析					
+00401101   mov         dword ptr [004225c4],edx         ;   无			
+00401107   pop         edi                              ;6、还原成C函数
 00401108   pop         esi								
 00401109   pop         ebx								
 0040110A   mov         esp,ebp								
